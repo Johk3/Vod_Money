@@ -1,0 +1,22 @@
+Hello there. This is how you use this.
+
+MAKE SURE YOU HAVE FFmpeg INSTALLED BECAUSE IF YOU DONT THIS WILL NOT WORK!
+
+When you start the program it is going to ask download or videos. That means you have to type Download if you want to download stuff and Videos if you want to search for videos.
+
+
+To search for vods:
+Go to the videos option of fupi-vods.
+Then give fupi-vods.py a content creators name and it will show the vods from that content creator.
+
+Download video:
+Go to the downloads option
+Now you should have the ID of the vod for example when you searched for a vod you should have seen something like this:
+
+"221837124
+SUPER MARIO ODYSSSEY - Stream #2 / 600,000,000
+Bananasaurus_Rex playing Super Mario Odyssey
+Published 2018-01-24 @ 12:05:25  Length: 3h 40min"
+
+If you see the numbers that are above all the information. Those numbers are needed for the downloading of the vod so what you do is:
+You go to download in fupi-vods.py then you give it the numbers from the vod you want and then it will download that vod to a folder called output.
