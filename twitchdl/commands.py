@@ -87,6 +87,25 @@ def _download_files(base_url, directory, filenames, max_workers):
 
     return [f.result()[0] for f in futures]
 
+def run(*popenargs, input=None, check=False, **kwargs):
+    if input is not None:
+        if 'stdin' in kwargs:
+            raise ValueError('stdin and input arguments may not both be used.')
+        kwargs['stdin'] = subprocess.PIPE
+
+    process = subprocess.Popen(*popenargs, **kwargs)
+    try:
+        stdout, stderr = process.communicate(input)
+    except:
+        process.kill()
+        process.wait()
+        raise
+    retcode = process.poll()
+    if check and retcode:
+        raise subprocess.CalledProcessError(
+            retcode, process.args, output=stdout, stderr=stderr)
+    return retcode, stdout, stderr
+
 
 def _join_vods(directory, filenames, target):
     input_path = "{}/files.txt".format(directory)
@@ -95,7 +114,7 @@ def _join_vods(directory, filenames, target):
         for filename in filenames:
             f.write('file {}\n'.format(filename))
 
-    result = subprocess.run([
+    result = run([
         "ffmpeg",
         "-f", "concat",
         "-i", input_path,
