@@ -4,3 +4,4 @@ stdeb~=0.8.5
 twine~=1.8.1
 wheel~=0.29.0
 google-api-python-client~=1.7.4
+oauth2client~=4.1.3

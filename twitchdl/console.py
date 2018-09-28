@@ -23,14 +23,15 @@ COMMANDS = [
     ),
     Command(
         name="download",
-        description="Download a video",
+        description="Download a video"
+                    "",
         arguments=[
             (["video_id"], {
                 "help": "video ID",
                 "type": int,
             }),
             (["-w", "--max_workers"], {
-                "help": "maximal number of threads for downloading vods concurrently (default 5)",
+                "help": "maximal number of threads for downloading vods concurrently (default 10)",
                 "type": int,
                 "default": 10,
             }),

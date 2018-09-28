@@ -1,6 +1,6 @@
 Hello there. This is how you use this.
 
-MAKE SURE YOU HAVE FFmpeg INSTALLED BECAUSE IF YOU DONT THIS WILL NOT WORK!
+MAKE SURE YOU HAVE FFmpeg and pyside INSTALLED BECAUSE IF YOU DONT THIS WILL NOT WORK!
 
 When you start the program it is going to ask download or videos. That means you have to type Download if you want to download stuff and Videos if you want to search for videos.
 

@@ -35,6 +35,8 @@ while running:
             print("It seems like you gave me a wrong ID\n")
             sleep(1)
 
+        
+
     if question.lower() == "videos":
         creator = input("Give me a twitch username to search vods from:\n")
         try:
